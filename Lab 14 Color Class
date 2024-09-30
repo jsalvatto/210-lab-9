@@ -32,13 +32,19 @@ int main()
         }
     };
     
-    void print(Student);
+    void print(Color);
      
    
 int main() {
    
-    Color red;
+    Color apple;
+        red.setRed(104, 401)
         
+    Color grass;
+        green.setGreen(103, 301)
+        
+    Color ocean;
+        blue.setBlue(102, 201)
     
 return 0;
 }
