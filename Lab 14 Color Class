@@ -9,10 +9,8 @@
 #include <limits>
 #include <fstream>
 using namespace std;
-
-int main()
-{
-    class Color{
+    
+    class color{
         private:
             int red;
             int green;
@@ -26,25 +24,30 @@ int main()
             void setBlue(int b) {blue = b;}
             
         void print(){
-            cout<<setw(W15)<<"Red"<<red<<endl;
-            cout<<setw(W15)<<"Blue"<<blue<<endl;
-            cout<<setw(W15)<<"Green"<<green<<endl;
+            cout<<"Red "<<red<<endl;
+            cout<<"Blue "<<blue<<endl;
+            cout<<"Green "<<green<<endl;
         }
     };
     
-    void print(Color);
+    void print(color){
+        cout<<color.getRed()<<" "<<color.getGreen()<<" "<<color.getBlue()<<endl;
+    }
      
    
 int main() {
    
-    Color apple;
-        red.setRed(104, 401)
+    color apple;
+        apple.setRed(104, 401)
+        apple.print();
         
-    Color grass;
-        green.setGreen(103, 301)
+    color grass;
+        grass.setGreen(103, 301)
+        grass.print();
         
-    Color ocean;
-        blue.setBlue(102, 201)
+    color ocean;
+        ocean.setBlue(102, 201)
+        ocean.print();
     
 return 0;
 }
