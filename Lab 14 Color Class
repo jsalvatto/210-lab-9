@@ -10,12 +10,12 @@
 #include <fstream>
 using namespace std;
     
-    class color{
+    class color{//created a class named color with 3 int variables
         private:
             int red;
             int green;
             int blue;
-        public:
+        public:// getters and setters, get returns the value listed and set stores the value
             int getRed()    {return red;}
             void setRed(int r) {red = r;}
             int getGreen()    {return green;}
@@ -23,10 +23,10 @@ using namespace std;
             int getBlue()    {return blue;}
             void setBlue(int b) {blue = b;}
             
-        void print(){
-            cout<<"Red "<<red<<endl;
-            cout<<"Blue "<<blue<<endl;
-            cout<<"Green "<<green<<endl;
+        void print(){// print function outputs data in a neat manner
+            cout<<"Red: "<<red<<endl;
+            cout<<"Blue: "<<blue<<endl;
+            cout<<"Green: "<<green<<endl;
         }
     };
     
@@ -34,7 +34,7 @@ using namespace std;
         cout<<printcolor.getRed()<<" "<<printcolor.getGreen()<<" "<<printcolor.getBlue()<<endl;
     }
     
-    void display()
+    void display()//function to neatly seperate output for easier reading
     {
         int count;
             for (count = 0; count < 30; count++)
@@ -47,31 +47,33 @@ using namespace std;
     
     }
      
-   
 int main() {
    
-    color apple;
+    color apple;//apples are red
         apple.setRed(401);
-        apple.setGreen(0);
-        apple.setBlue(0);
+        apple.setGreen(104);
+        apple.setBlue(410);
         apple.print();
+        print(apple);
         display();
         
-    color grass;
+    color grass;//grass is green
         grass.setGreen(301);
-        grass.setRed(0);
-        grass.setBlue(0);
+        grass.setRed(103);
+        grass.setBlue(310);
         grass.print();
         display();
         
-    color ocean;
+    color ocean;//water is wet
         ocean.setBlue(201);
-        ocean.setRed(0);
-        ocean.setGreen(0);
+        ocean.setRed(102);
+        ocean.setGreen(210);
         ocean.print();
         display();
 
-        
-
 return 0;
+}
+
+void printf (color c){
+    cout<<c.getRed()<<" ("<<c.getBlue()<<" ("<<c.getGreen()<<" ("<<endl;
 }
