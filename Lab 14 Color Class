@@ -18,6 +18,27 @@ int main()
             int green;
             int blue;
         public:
+            int getRed()    {return red;}
+            void setRed(int r) {red = r;}
+            int getGreen()    {return green;}
+            void setGreen(int g) {green = g;}
+            int getBlue()    {return blue;}
+            void setBlue(int b) {blue = b;}
+            
+        void print(){
+            cout<<setw(W15)<<"Red"<<red<<endl;
+            cout<<setw(W15)<<"Blue"<<blue<<endl;
+            cout<<setw(W15)<<"Green"<<green<<endl;
+        }
+    };
+    
+    void print(Student);
+     
+   
+int main() {
+   
+    Color red;
+        
     
 return 0;
 }
