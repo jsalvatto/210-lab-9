@@ -2,20 +2,20 @@
 
 #include <iostream>
 #include <string>
-#include <iomanip>
+#include <iomanip>//for setw
 #include <vector>
 #include <algorithm>
 #include <numeric>
 #include <limits>
-#include <fstream>
+#include <fstream>//preproccesor directive to read or maniplate data from external sources
 using namespace std;
 
-    class Movie{
+    class Movie{//creates a movie class
         private:
             string screenWriter;
             int year;
             string title;
-        public:
+        public://getters and setters for the class
             string getScreenWriter()    {return screenWriter;}
             void setScreenWriter(string sw) {screenWriter = sw;}
             int getYear()   {return year;}
@@ -23,7 +23,7 @@ using namespace std;
             string getTitle()   {return title;}
             void setTitle(string t) {title = t;}
             
-        void print(){
+        void print(){//print function with setw for spacing
             cout<<"Movie: "<<getScreenWriter()<<endl;
             cout<< right << setw(25)<<"Year released: "<<getYear()<<endl;
             cout<< right << setw(25)<<"Screenwriter: "<<getTitle()<<endl;
@@ -31,10 +31,10 @@ using namespace std;
 };
      
 int main() {
-   vector<Movie> movie_list;
-   ifstream externalFile ("C:/Users/USER1/Downloads/input.txt");
+   vector<Movie> movie_list;//dynamic array to hold multiple objects
+   ifstream externalFile ("C:/Users/USER1/Downloads/input.txt");//copy address as text to decrease chances of error
     if(!externalFile.is_open()){
-        cout<<"Error: Cannot open file."<<endl;
+        cout<<"Error: Cannot open file."<<endl;//ifstream failsafe
         return 1;
     }
    
@@ -42,21 +42,21 @@ int main() {
     int y;
     string t;
    
-    while (getline(externalFile, t)){
-        externalFile>>y;
+    while (getline(externalFile, t)){//reads title of movie
+        externalFile>>y;//reads year of movie
         externalFile.ignore();
-        getline(externalFile, sw);
+        getline(externalFile, sw);//reads screenwriter
         
-    Movie movie;
+    Movie movie;//creates movie object
         movie.setTitle(t);
         movie.setYear(y);
         movie.setScreenWriter(sw);
-        movie_list.push_back(movie);
+        movie_list.push_back(movie);//append with the newly gained information
     }
     
     externalFile.close();
     
-    for(auto& movie : movie_list){
+    for(auto& movie : movie_list){//loops through each movie object and calls print function
         movie.print();
         cout<<endl;
     }
