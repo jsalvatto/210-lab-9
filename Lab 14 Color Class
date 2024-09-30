@@ -46,6 +46,16 @@ using namespace std;
             }
     
     }
+    
+    void printr (color c){
+    cout<<"Red: ("<<c.getRed()<<") ("<<c.getBlue()<<") ("<<c.getGreen()<<")"<<endl;
+}
+    void printg (color c){
+    cout<<"Green: ("<<c.getRed()<<") ("<<c.getBlue()<<") ("<<c.getGreen()<<")"<<endl;
+}
+    void printb (color c){
+    cout<<"Ocean: ("<<c.getRed()<<") ("<<c.getBlue()<<") ("<<c.getGreen()<<")"<<endl;
+}
      
 int main() {
    
@@ -54,7 +64,7 @@ int main() {
         apple.setGreen(104);
         apple.setBlue(410);
         apple.print();
-        print(apple);
+        printr(apple);
         display();
         
     color grass;//grass is green
@@ -62,6 +72,7 @@ int main() {
         grass.setRed(103);
         grass.setBlue(310);
         grass.print();
+        printg(grass);
         display();
         
     color ocean;//water is wet
@@ -69,11 +80,10 @@ int main() {
         ocean.setRed(102);
         ocean.setGreen(210);
         ocean.print();
+        printb(ocean);
         display();
 
 return 0;
 }
 
-void printf (color c){
-    cout<<c.getRed()<<" ("<<c.getBlue()<<" ("<<c.getGreen()<<" ("<<endl;
-}
+
