@@ -45,8 +45,22 @@ int main() {
     while (getline(externalFile, sw)){
         externalFile>>y;
         externalFile.ignore();
+        getline(externalFile, t);
+        
+    Movie movie;
+        movie.setScreenWriter(sw);
+        movie.setYear(y);
+        movie.setTitle(t);
+        movie_list.push_back(movie);
     }
-
+    
+    externalFile.close();
+    
+    for(auto& movie : movie_list){
+        movie.print();
+        cout<<endl;
+    }
+    
 return 0;
 }
 
