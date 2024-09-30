@@ -22,9 +22,21 @@ using namespace std;
             void setYear(int y) {year = y;}
             string getTitle()   {return title;}
             void setTitle(string t) {title = t;}
+            
+        void print(){
+            cout<<"Screenwriter: "<<getScreenWriter()<<endl;
+            cout<<"Year: "<<getYear()<<endl;
+            cout<<"Title: "<<getTitle()<<endl;
+        }
 };
      
 int main() {
+   vector<Movie> movie_list;
+   ifstream fin ("input.txt");
+   
+    string sw;
+    int y;
+    string t;
    
 
 return 0;
