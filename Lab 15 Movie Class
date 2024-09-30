@@ -8,9 +8,26 @@
 #include <numeric>
 #include <limits>
 #include <fstream>
+using namespace std;
+
+    class Movie{
+        private:
+            string screenWriter;
+            int year;
+            string title;
+        public:
+            string getScreenWriter()    {return screenWriter;}
+            void setScreenWriter(string sw) {screenWriter = sw;}
+            int getYear()   {return year;}
+            void setYear(int y) {year = y;}
+            string getTitle()   {return title;}
+            void setTitle(string t) {title = t;}
+};
      
 int main() {
    
 
 return 0;
 }
+
+
