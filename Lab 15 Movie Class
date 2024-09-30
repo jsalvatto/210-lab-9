@@ -24,9 +24,9 @@ using namespace std;
             void setTitle(string t) {title = t;}
             
         void print(){
-            cout<<"Screenwriter: "<<getScreenWriter()<<endl;
-            cout<<"Year: "<<getYear()<<endl;
-            cout<<"Title: "<<getTitle()<<endl;
+            cout<<"Movie: "<<getScreenWriter()<<endl;
+            cout<< right << setw(25)<<"Year released: "<<getYear()<<endl;
+            cout<< right << setw(25)<<"Screenwriter: "<<getTitle()<<endl;
         }
 };
      
@@ -42,15 +42,15 @@ int main() {
     int y;
     string t;
    
-    while (getline(externalFile, sw)){
+    while (getline(externalFile, t)){
         externalFile>>y;
         externalFile.ignore();
-        getline(externalFile, t);
+        getline(externalFile, sw);
         
     Movie movie;
-        movie.setScreenWriter(sw);
-        movie.setYear(y);
         movie.setTitle(t);
+        movie.setYear(y);
+        movie.setScreenWriter(sw);
         movie_list.push_back(movie);
     }
     
