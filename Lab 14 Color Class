@@ -30,24 +30,48 @@ using namespace std;
         }
     };
     
-    void print(color){
-        cout<<color.getRed()<<" "<<color.getGreen()<<" "<<color.getBlue()<<endl;
+    void print(color printcolor){
+        cout<<printcolor.getRed()<<" "<<printcolor.getGreen()<<" "<<printcolor.getBlue()<<endl;
+    }
+    
+    void display()
+    {
+        int count;
+            for (count = 0; count < 30; count++)
+            {
+                cout<<"_";
+            } 
+            {
+                cout<<endl;
+            }
+    
     }
      
    
 int main() {
    
     color apple;
-        apple.setRed(104, 401)
+        apple.setRed(401);
+        apple.setGreen(0);
+        apple.setBlue(0);
         apple.print();
+        display();
         
     color grass;
-        grass.setGreen(103, 301)
+        grass.setGreen(301);
+        grass.setRed(0);
+        grass.setBlue(0);
         grass.print();
+        display();
         
     color ocean;
-        ocean.setBlue(102, 201)
+        ocean.setBlue(201);
+        ocean.setRed(0);
+        ocean.setGreen(0);
         ocean.print();
-    
+        display();
+
+        
+
 return 0;
 }
